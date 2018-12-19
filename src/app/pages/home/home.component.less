@@ -1,5 +1,24 @@
+// .loc-home {
+//   padding: 10px;
+// }
 .loc-line-form {
-  padding: 10px;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 336px;
+  .loc-col-form {
+    flex-grow: 1;
+    flex-shrink: 0;
+    margin: 10px;
+    padding: 20px;
+    width: calc(50% - 30px);
+    height: 336px;
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .loc-small {
+    width: 422px;
+  }
+  .loc-large {
+    width: 864px;
+  }
 }

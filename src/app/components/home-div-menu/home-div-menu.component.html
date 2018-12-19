@@ -1,0 +1,21 @@
+<div class="loc-div-menu">
+  <span class="loc-menu-name">{{menuName}}</span>
+  <div class="loc-menu-btn">
+    <nz-dropdown [nzTrigger]="'click'" [nzPlacement]="'bottomRight'">
+      <a nz-dropdown>
+        <img src="../../../assets/images/icon/menu-list.png" />
+      </a>
+      <ul class="spe-div-menu" nz-menu nzSelectable>
+        <li nz-menu-item>
+          <a>列表</a>
+        </li>
+        <li nz-menu-item>
+          <a>图表</a>
+        </li>
+        <li nz-menu-item>
+          <a>移除</a>
+        </li>
+      </ul>
+    </nz-dropdown>
+  </div>
+</div>
