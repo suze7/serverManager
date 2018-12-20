@@ -6,19 +6,36 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  app-home-div-menu {
+    position: relative;
+    z-index: 5;
+    display: block;
+  }
   .loc-col-form {
+    position: relative;
     flex-grow: 1;
     flex-shrink: 0;
     margin: 10px;
-    padding: 20px;
+    padding: 20px 20px 10px;
     width: calc(50% - 30px);
     height: 336px;
     background: rgba(0, 0, 0, 0.3);
   }
-  .loc-small {
-    width: 422px;
+  .loc-fill-form {
+    position: absolute;
+    top: 34px;
+    right: 20px;
+    bottom: 0;
+    left: 20px;
   }
-  .loc-large {
-    width: 864px;
-  }
+}
+.loc-no-data {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  transform: translateY('-50%');
+  text-align: center;
+  font-size: 12px;
+  color: #8190b8;
 }

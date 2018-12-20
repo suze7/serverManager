@@ -10,18 +10,6 @@ export class MenuData {
     this.url = url;
     this.data = data;
   }
-
-  setActive(flag: boolean) {
-    this.active = flag;
-  }
-
-  getImg () {
-    if (this.active) {
-      return this.img + '-active.png';
-    } else {
-      return this.img + '.png';
-    }
-  }
 }
 
 // export class MenuActiveController {
