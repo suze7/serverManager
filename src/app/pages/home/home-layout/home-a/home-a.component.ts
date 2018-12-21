@@ -102,9 +102,9 @@ export class HomeAComponent implements OnInit {
         },
         itemStyle: {
           emphasis: {
-            shadowBlur: 10,
+            shadowBlur: 15,
             shadowOffsetX: 0,
-            shadowColor: 'rgba(0, 0, 0, 0.5)'
+            shadowColor: 'rgba(14, 21, 42, 0.25)'
           }
         }
       }

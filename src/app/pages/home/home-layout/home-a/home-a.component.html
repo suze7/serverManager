@@ -6,7 +6,13 @@
 ></div>
 
 <div class="loc-table" *ngIf="type === '列表'">
-  <nz-table #basicTable [nzData]="tableData" class="spec-table" nzSize="small" nzShowPagination="false">
+  <nz-table
+    #basicTable
+    [nzData]="tableData"
+    class="spec-table spec-unselected"
+    nzShowPagination="false"
+    [nzScroll]="{ y: '200px' }"
+  >
     <thead>
       <tr>
         <th>告警级别</th>
@@ -15,7 +21,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let data of basicTable.data">
-        <td>{{ data.name }}</td>
+        <td style="width: 50%">{{ data.name }}</td>
         <td>{{ data.value }}</td>
       </tr>
     </tbody>

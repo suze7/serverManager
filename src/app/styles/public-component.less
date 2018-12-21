@@ -2,7 +2,7 @@
   background: #1d285d;
   .ant-dropdown-menu-item,
   .ant-dropdown-menu-submenu-title {
-     > a {
+    > a {
       min-width: 56px;
       text-align: center;
       color: #fff;
@@ -15,6 +15,70 @@
     background: inherit;
     > a {
       background: inherit;
+    }
+  }
+}
+
+.spec-table {
+  .ant-table {
+    color: inherit;
+    font-size: inherit;
+  }
+  &.spec-unselected {
+    tr {
+      &:hover {
+        &:nth-child(odd) {
+          td {
+            background: none;
+          }
+        }
+        &:nth-child(even) {
+          td {
+            background: rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
+    }
+  }
+  .ant-table-content {
+    .ant-table-scroll {
+      overflow: visible;
+      .ant-table-header {
+        padding: 0 10px;
+        background: none;
+        overflow: hidden;
+        margin-bottom: 0 !important;
+      }
+      > .ant-table-body {
+        padding: 0 5px 0 10px;
+        background: none;
+        overflow-y: auto;
+        .scrollbar();
+      }
+    }
+  }
+  tr {
+    &:nth-child(even) {
+      td {
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  .ant-table-content {
+    tr:first-child {
+      th {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 0;
+      }
+    }
+    tr {
+      > th,
+      td {
+        padding: 0 24px;
+        height: 40px;
+        border: 0;
+        color: inherit;
+      }
     }
   }
 }
