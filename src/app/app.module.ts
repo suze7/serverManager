@@ -11,13 +11,16 @@ import en from '@angular/common/locales/en';
 import { AppMenuModule } from './layouts/app-menu/app-menu.module';
 import { AppRoutingModule } from './app-routing.module';
 import { IndexLayoutComponent } from './layouts/index-layout/index-layout.component';
+import { MonitorScreenComponent } from './pages/monitor-screen/monitor-screen.component';
+import { NgxEchartsModule } from 'ngx-echarts';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
     AppComponent,
-    IndexLayoutComponent
+    IndexLayoutComponent,
+    MonitorScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,8 @@ registerLocaleData(en);
     CommonModule,
     ReactiveFormsModule,
     AppMenuModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxEchartsModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]
