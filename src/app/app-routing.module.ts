@@ -6,8 +6,18 @@ import { MonitorScreenComponent } from './pages/monitor-screen/monitor-screen.co
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'monitorScreen',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: '',
+    component: IndexLayoutComponent,
+    children: [
+      {
+        path: 'home',
+        loadChildren: './pages/home/home.module#HomeModule'
+      }
+    ]
   },
   {
     path: 'monitorScreen',
@@ -18,10 +28,12 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [],
-  imports: [RouterModule.forRoot(routes, {
-    useHash: true,
-    preloadingStrategy: PreloadAllModules
-  })],
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: true,
+      preloadingStrategy: PreloadAllModules
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}

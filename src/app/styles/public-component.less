@@ -82,3 +82,37 @@
     }
   }
 }
+
+table.spec-ptable-content {
+  .ui-table-thead {
+    > tr {
+      background: none;
+      > th {
+        padding: 0 24px;
+        height: 40px;
+        border: 0;
+        color: inherit;
+        background: rgba(0, 0, 0, 0.3);
+        font-weight: normal;
+      }
+    }
+  }
+  .ui-table-tbody {
+    > tr {
+      color: inherit;
+      background: none;
+      &:nth-child(even) {
+        background: rgba(0, 0, 0, 0.1);
+      }
+      > td {
+        padding: 0 24px;
+        height: 40px;
+        border: 0;
+      }
+    }
+  }
+}
+
+body div.ui-table{
+  font-size: inherit;
+}

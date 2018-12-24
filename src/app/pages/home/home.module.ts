@@ -21,6 +21,7 @@ import { HomeOComponent } from './home-layout/home-o/home-o.component';
 import { HomePComponent } from './home-layout/home-p/home-p.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { NgZorroAntdModule } from 'ng-zorro-antd';
     HomeRoutingModule,
     HomeDivMenuModule,
     NgxEchartsModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    TableModule
   ]
 })
 export class HomeModule {}

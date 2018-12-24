@@ -4,12 +4,13 @@
 
 .scrollbar() {
   &::-webkit-scrollbar {
-    width: 5px;
+    // width: 5px;
     height: 5px;
   }
   &::-webkit-scrollbar-thumb {
-    border-radius: 2px;
-    background: #8190b8;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 42%, #8190b8 42%, #8190b8 58%, rgba(0,0,0,0) 58%);
+    // background: #8190b8;
   }
   &::-webkit-scrollbar-track {
     border-radius: 2px;

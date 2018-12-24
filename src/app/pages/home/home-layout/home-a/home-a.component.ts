@@ -111,6 +111,11 @@ export class HomeAComponent implements OnInit {
     ]
   };
 
+  public tableCols = [
+    { field: 'name', header: '告警级别' },
+    { field: 'value', header: '告警数量' }
+  ];
+
   public tableData = [
     { value: 18, name: '严重告警' },
     { value: 6, name: '重要告警' },

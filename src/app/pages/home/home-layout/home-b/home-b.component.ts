@@ -122,6 +122,14 @@ export class HomeBComponent implements OnInit {
     ]
   };
 
+  public tableCols = [
+    { field: 'name', header: '资源类别' },
+    { field: 'alarm1', header: '严重告警' },
+    { field: 'alarm2', header: '重要告警' },
+    { field: 'alarm3', header: '次要告警' },
+    { field: 'alarm4', header: '提示告警' }
+  ];
+
   public tableData = [
     {
       name: '网络设备',

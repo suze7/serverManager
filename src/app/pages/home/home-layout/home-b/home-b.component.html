@@ -6,7 +6,26 @@
 ></div>
 
 <div class="loc-table com-scrollbar" *ngIf="type === '列表'">
-  <nz-table
+  <p-table
+    [columns]="tableCols"
+    [value]="tableData"
+    [scrollable]="true"
+    scrollHeight="200px"
+    styleClass="loc-ptable"
+    tableStyleClass="spec-ptable-content"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th *ngFor="let col of columns">{{ col.header }}</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+        <td *ngFor="let col of columns">{{ rowData[col.field] }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <!-- <nz-table
     #basicTable
     [nzData]="tableData"
     class="spec-table spec-unselected"
@@ -31,5 +50,5 @@
         <td style="width: 20%;">{{ data.alarm4 }}</td>
       </tr>
     </tbody>
-  </nz-table>
+  </nz-table> -->
 </div>

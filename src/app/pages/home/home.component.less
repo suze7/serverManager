@@ -1,6 +1,5 @@
-// .loc-home {
-//   padding: 10px;
-// }
+@import '../../styles/variables.less';
+
 .loc-line-form {
   padding: 10px 20px;
   display: flex;
@@ -34,9 +33,15 @@
     }
     ::ng-deep .loc-table {
       margin: 20px 10px 16px;
+      padding: 0 10px;
       height: calc(100% - 37px);
       font-size: 12px;
       overflow: auto;
+      .loc-ptable {
+        .ui-table-scrollable-body {
+          .scrollbar();
+        }
+      }
     }
   }
 }

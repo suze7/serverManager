@@ -6,24 +6,23 @@
 ></div>
 
 <div class="loc-table" *ngIf="type === '列表'">
-  <nz-table
-    #basicTable
-    [nzData]="tableData"
-    class="spec-table spec-unselected"
-    nzShowPagination="false"
-    [nzScroll]="{ y: '200px' }"
+  <p-table
+    [columns]="tableCols"
+    [value]="tableData"
+    [scrollable]="true"
+    scrollHeight="200px"
+    styleClass="loc-ptable"
+    tableStyleClass="spec-ptable-content"
   >
-    <thead>
+    <ng-template pTemplate="header" let-columns>
       <tr>
-        <th>告警级别</th>
-        <th>告警数量</th>
+        <th *ngFor="let col of columns">{{ col.header }}</th>
       </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let data of basicTable.data">
-        <td style="width: 50%">{{ data.name }}</td>
-        <td>{{ data.value }}</td>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+        <td *ngFor="let col of columns">{{ rowData[col.field] }}</td>
       </tr>
-    </tbody>
-  </nz-table>
+    </ng-template>
+  </p-table>
 </div>
