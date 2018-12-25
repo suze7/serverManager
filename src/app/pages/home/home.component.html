@@ -1,7 +1,8 @@
 <div class="loc-line-form">
+  <img src="/assets/images/menu/group.png" class="loc-group-btn com-hover" (click)="showDialog()"/>
   <ng-container *ngFor="let data of homeData">
     <div *ngIf="data.menuType !== '移除'" [ngStyle]="data.style" class="loc-col-form">
-      <app-home-div-menu [menuName]="data.name" [defaultMenu]="data.menuType" (selectedMenu)="onSelectedMenu($event, data)"></app-home-div-menu>
+      <app-home-div-menu [menuName]="data.name" [menuList]="data.menuList" [defaultMenu]="data.menuType" (selectedMenu)="onSelectedMenu($event, data)"></app-home-div-menu>
       <div *ngIf="!data.noData" class="loc-fill-form">
         <app-home-a *ngIf="data.id === 1" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-a>
         <app-home-b *ngIf="data.id === 2" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-b>
@@ -23,4 +24,5 @@
       <p *ngIf="data.noData" class="loc-no-data">暂无数据</p>
     </div>
   </ng-container>
+  <app-home-setting [(visible)]="visible" [(selectedList)]="homeData" [(unSelectedList)]="unShowData"></app-home-setting>
 </div>

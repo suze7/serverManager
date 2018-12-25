@@ -16,6 +16,9 @@ export class HomeBComponent implements OnInit {
 
   public chartOption = {
     color: ['#ff5252', '#ff9e54', '#fff954', '#1cefef'],
+    tooltip: {
+      trigger: 'axis',
+    },
     legend: {
       data: ['严重告警', '重要告警', '次要告警', '提示告警'],
       align: 'left',

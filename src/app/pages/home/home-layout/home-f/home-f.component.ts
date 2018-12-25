@@ -3,7 +3,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-home-f',
   templateUrl: './home-f.component.html',
-  styleUrls: ['./home-f.component.css']
+  styleUrls: ['./home-f.component.less']
 })
 export class HomeFComponent implements OnInit {
 

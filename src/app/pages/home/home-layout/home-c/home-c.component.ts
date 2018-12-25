@@ -14,6 +14,9 @@ export class HomeCComponent implements OnInit {
 
   public type = '图表';
   public chartOption = {
+    tooltip: {
+      trigger: 'axis'
+    },
     xAxis: {
       data: [
         'windows',
@@ -65,7 +68,7 @@ export class HomeCComponent implements OnInit {
     },
     series: [
       {
-        name: '资源类型统计 ',
+        name: '',
         type: 'bar',
         itemStyle: {
           barBorderRadius: 500,

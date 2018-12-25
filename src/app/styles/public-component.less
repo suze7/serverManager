@@ -88,7 +88,7 @@ table.spec-ptable-content {
     > tr {
       background: none;
       > th {
-        padding: 0 24px;
+        padding: 0 0 0 24px;
         height: 40px;
         border: 0;
         color: inherit;
@@ -105,9 +105,46 @@ table.spec-ptable-content {
         background: rgba(0, 0, 0, 0.1);
       }
       > td {
-        padding: 0 24px;
+        padding: 0 0 0 24px;
         height: 40px;
         border: 0;
+      }
+    }
+  }
+}
+
+table.spec-ptable-small {
+  .ui-table-thead {
+    > tr {
+      background: none;
+      > th {
+        padding: 0 16px 0 0;
+        height: 30px;
+        border: 0;
+        background: none;
+        color: inherit;
+        font-weight: normal;
+        &:nth-last-child(1) {
+          padding: 0 8px 0 0;
+        }
+      }
+    }
+  }
+  .ui-table-tbody {
+    > tr {
+      color: inherit;
+      background: none;
+      &:nth-child(even) {
+        background: none;
+      }
+      > td {
+        padding: 0 16px 0 0;
+        height: 30px;
+        border: 0;
+        border-top: 1px solid #8190b8;
+        &:nth-last-child(1) {
+          padding: 0 8px 0 0;
+        }
       }
     }
   }

@@ -10,10 +10,25 @@ export class HomeDivMenuComponent implements OnInit {
   @Output() selectedMenu = new EventEmitter();
   @Input() menuName = '';
   @Input() set menuList(data) {
+    if (!data) {
+      this.realMenuList = [{
+        name: '图表',
+        data: null
+      }, {
+        name: '列表',
+        data: null
+      }, {
+        name: '移除',
+        data: null
+      }];
+      return;
+    }
     this.realMenuList = data;
   }
   @Input() set defaultMenu(menu) {
-    console.log(menu);
+    if (!this.realMenuList) {
+      return;
+    }
     if (typeof menu === 'string') {
       this.choosedMenu = this.realMenuList.find(v => v.name === menu);
     } else {

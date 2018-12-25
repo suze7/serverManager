@@ -22,10 +22,15 @@ import { HomePComponent } from './home-layout/home-p/home-p.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import { TableModule } from 'primeng/table';
+import { ProgressBarModule } from 'primeng/progressbar';
+import { MyProgressbarModule } from 'src/app/components/my-progressbar/my-progressbar.module';
+import { HomeSettingComponent } from './home-setting/home-setting.component';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [
     HomeComponent,
+    HomeSettingComponent,
     HomeAComponent,
     HomeBComponent,
     HomeCComponent,
@@ -49,7 +54,10 @@ import { TableModule } from 'primeng/table';
     HomeDivMenuModule,
     NgxEchartsModule,
     NgZorroAntdModule,
-    TableModule
+    TableModule,
+    ProgressBarModule,
+    MyProgressbarModule,
+    DialogModule
   ]
 })
 export class HomeModule {}

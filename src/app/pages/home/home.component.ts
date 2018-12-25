@@ -9,7 +9,10 @@ import { HomeData } from 'src/app/classlib/home';
   styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
+
   public homeData = homeDataList;
+  public unShowData = [];
+  public visible = false;
 
   constructor() {}
 
@@ -21,4 +24,13 @@ export class HomeComponent implements OnInit {
   public setNoData(flag, data: HomeData) {
     data.noData = flag;
   }
+
+  public showDialog() {
+    this.visible = true;
+  }
+
+  public consoleData(e) {
+    console.log(this.visible, e);
+  }
+
 }
