@@ -1,0 +1,17 @@
+<div class="loc-div-menu">
+  <span class="loc-menu-name">{{menuName}}</span>
+  <div class="loc-menu-btn">
+    <nz-dropdown [nzTrigger]="'click'" [nzPlacement]="'bottomRight'">
+      <a nz-dropdown>
+        <img src="../../../assets/images/icon/menu-list.png" />
+      </a>
+      <ul class="spe-div-menu" nz-menu>
+        <ng-container *ngFor="let menu of realMenuList">
+          <li nz-menu-item *ngIf="menu !== choosedMenu" (click)="onClickMenu(menu)">
+            <a>{{menu.name}}</a>
+          </li>
+        </ng-container>
+      </ul>
+    </nz-dropdown>
+  </div>
+</div>

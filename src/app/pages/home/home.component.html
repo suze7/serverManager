@@ -1,0 +1,28 @@
+<div class="loc-line-form">
+  <img src="/assets/images/menu/group.png" class="loc-group-btn com-hover" (click)="showDialog()"/>
+  <ng-container *ngFor="let data of homeData">
+    <div *ngIf="data.menuType !== '移除'" [ngStyle]="data.style" class="loc-col-form">
+      <app-home-div-menu [menuName]="data.name" [menuList]="data.menuList" [defaultMenu]="data.menuType" (selectedMenu)="onSelectedMenu($event, data)"></app-home-div-menu>
+      <div *ngIf="!data.noData" class="loc-fill-form">
+        <app-home-a *ngIf="data.id === 1" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-a>
+        <app-home-b *ngIf="data.id === 2" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-b>
+        <app-home-c *ngIf="data.id === 3" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-c>
+        <app-home-d *ngIf="data.id === 4" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-d>
+        <app-home-e *ngIf="data.id === 5" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-e>
+        <app-home-f *ngIf="data.id === 6" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-f>
+        <app-home-g *ngIf="data.id === 7" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-g>
+        <app-home-h *ngIf="data.id === 8" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-h>
+        <app-home-i *ngIf="data.id === 9" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-i>
+        <app-home-j *ngIf="data.id === 10" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-j>
+        <app-home-k *ngIf="data.id === 11" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-k>
+        <app-home-l *ngIf="data.id === 12" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-l>
+        <app-home-m *ngIf="data.id === 13" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-m>
+        <app-home-n *ngIf="data.id === 14" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-n>
+        <app-home-o *ngIf="data.id === 15" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-o>
+        <app-home-p *ngIf="data.id === 16" [contentType]="data.menuType" (noData)="setNoData($event, data)"></app-home-p>
+      </div>
+      <p *ngIf="data.noData" class="loc-no-data">暂无数据</p>
+    </div>
+  </ng-container>
+  <app-home-setting [(visible)]="visible" [(selectedList)]="homeData" [(unSelectedList)]="unShowData"></app-home-setting>
+</div>

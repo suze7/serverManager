@@ -1,0 +1,25 @@
+<div class="loc-table com-scrollbar" *ngIf="type === '列表'">
+  <p-table
+    [columns]="tableCols"
+    [value]="tableData"
+    [scrollable]="true"
+    scrollHeight="200px"
+    styleClass="loc-ptable"
+    tableStyleClass="spec-ptable-small"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th style="width:64px;">告警级别</th>
+        <th *ngFor="let col of columns">{{ col.header }}</th>
+        <th style="width:122px;">产生时间</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+      <tr>
+        <td style="width:64px;" class="com-txt-center"><span class="loc-icon-circle" [ngClass]="'loc-icon-' + rowData.level"></span></td>
+        <td class="com-txt-overflow" *ngFor="let col of columns" [title]="rowData[col.field]">{{ rowData[col.field] }}</td>
+        <td style="width:122px;">{{ rowData.date }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
